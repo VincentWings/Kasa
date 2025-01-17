@@ -3,3 +3,52 @@
 //=============================================================================
 
 //== COLORS - HEX VALUES (list of all the colors)
+
+$c-black: #000;
+$c-white: #fff;
+
+
+//== COLORS - VARIABLES (to use in the code)
+
+/*
+$c-1: $c-black1;
+$c-2: $c-blue;
+/*/
+
+
+//== FONTS FAMILIES
+
+/*
+$ff-1: 'Lato', sans-serif;
+$ff-2: 'Montserrat', sans-serif;
+*/
+
+
+//== FONTS WEIGHT
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-bold: 600;
+$fw-extra-bold: 700;
+
+
+//== BREAKPOINTS
+
+// Extra small devices (portrait phones, LESS THAN 576px)
+$xs: 575px;
+
+// Small devices (landscape phones, 576px and UP)
+$sm: 576px;
+
+// Medium devices (tablets, 768px and UP)
+$md: 768px;
+
+// Large devices (desktops, 992px and UP)
+$lg: 992px;
+
+// Extra large devices (large desktops, 1200px and UP)
+$xl: 1280px;
+
+// Extra Extra large devices (TV, 4k 1600px and UP)
+$xxl: 1600px;

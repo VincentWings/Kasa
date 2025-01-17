@@ -1,3 +1,38 @@
 //=============================================================================
 //== GENERAL
 //=============================================================================
+
+//== ALL
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//== HTML
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+
+//== BODY
+
+body {
+    font-size: 1.6rem;
+}
+
+//== CONTAINER
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 2rem;
+
+    @include breakpoint(xl) {
+        padding: 0;
+    }
+}

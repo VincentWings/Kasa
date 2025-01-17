@@ -3,5 +3,54 @@
 //=============================================================================
 
 .navbar {
-    background: yellow;
+    padding: 2rem 0 2.5rem 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        img {
+            max-width: 14.5rem;
+        }
+    }
+
+    &__nav {
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 2.6rem;
+                }
+
+                a {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(md) {
+        padding: 4.5rem 0 5rem 0;
+
+        &__logo {
+            img {
+                max-width: 21rem;
+            }
+        }
+
+        &__nav {
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-right: 6rem;
+                    }
+                }
+            }
+        }
+    }
 }
