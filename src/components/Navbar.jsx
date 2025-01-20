@@ -1,12 +1,14 @@
 import React from "react";
-import logo from "../assets/img/logo.svg"; // Adjust the path if necessary
+import logo from "../assets/img/logo.svg";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="container">
         <div className="navbar__logo">
-          <img src={logo} alt="Kasa logo" />
+          <a href="/">
+            <img src={logo} alt="Kasa logo" />
+          </a>
         </div>
 
         <div className="navbar__nav">
