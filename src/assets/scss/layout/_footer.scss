@@ -1,3 +1,31 @@
 //=============================================================================
 //== FOOTER
 //=============================================================================
+
+footer {
+    padding: 6rem 2rem 2rem 2rem;
+    background: $c-black;
+    color: $c-white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+
+    .logo {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .copyright {
+        max-width: 100%;
+        width: 135px;
+        margin: auto;
+    }
+
+    @include breakpoint(md) {
+        font-size: 2.4rem;
+
+        .copyright {
+            width: 100%;
+        }
+    }
+}

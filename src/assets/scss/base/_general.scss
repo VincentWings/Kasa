@@ -32,11 +32,11 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1240px;
+    max-width: 126rem;
     margin: auto;
     padding: 0 2rem;
 
     @include breakpoint(xl) {
-        padding: 0;
+        padding: 0 2rem;
     }
 }

@@ -17,26 +17,28 @@
         }
     }
 
-    &__nav {
-        ul {
-            display: flex;
-            list-style: none;
+    ul {
+        display: flex;
+        list-style: none;
 
-            li {
-                &:not(:last-child) {
-                    margin-right: 2.6rem;
+        li {
+            &:not(:last-child) {
+                margin-right: 2.6rem;
+            }
+
+            a {
+                color: $c-black;
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-transform: capitalize;
+                text-decoration: none;
+
+                &.active {
+                    text-decoration: underline;
                 }
 
-                a {
-                    color: $c-black;
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    text-transform: capitalize;
-                    text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                &:hover {
+                    color: $c-1;
                 }
             }
         }
@@ -51,16 +53,14 @@
             }
         }
 
-        &__nav {
-            ul {
-                li {
-                    &:not(:last-child) {
-                        margin-right: 6rem;
-                    }
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-right: 6rem;
+                }
 
-                    a {
-                        font-size: 2.4rem;
-                    }
+                a {
+                    font-size: 2.4rem;
                 }
             }
         }

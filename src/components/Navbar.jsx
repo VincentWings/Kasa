@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/img/logo.svg";
 
 function Navbar() {
@@ -6,22 +7,30 @@ function Navbar() {
     <nav className="navbar">
       <div className="container">
         <div className="navbar__logo">
-          <a href="/">
+          <NavLink to="/">
             <img src={logo} alt="Kasa logo" />
-          </a>
+          </NavLink>
         </div>
 
-        <div className="navbar__nav">
-          <ul>
-            <li>
-              <a href="">Accueil</a>
-            </li>
-
-            <li>
-              <a href="">A propos</a>
-            </li>
-          </ul>
-        </div>
+        <ul className="navbar__nav">
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Accueil
+            </NavLink>
+          </li>
+          
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              À propos
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </nav>
   );
