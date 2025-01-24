@@ -1,0 +1,22 @@
+//=============================================================================
+//== ABOUT
+//=============================================================================
+
+.section-about {
+    margin-bottom: 2rem;
+
+    .content {
+        display: grid;
+        row-gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(md) {
+        margin-bottom: 5rem;
+
+        .content {
+            row-gap: 3rem;
+            column-gap: 6rem;
+        }
+    }
+}

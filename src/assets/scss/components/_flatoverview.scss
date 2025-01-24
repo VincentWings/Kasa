@@ -1,0 +1,161 @@
+//=============================================================================
+//== FLAT OVERVIEW
+//=============================================================================
+
+.flat-overview {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .subtitle {
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+    }
+
+    .tags-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .tag {
+        display: inline-block;
+        margin-right: 1rem;
+        margin-bottom: .4rem;
+        padding: .2rem 3rem;
+        background: $c-1;
+        color: $c-white;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 1rem;
+    }
+
+    .ratings-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+
+    .owner {
+        order: 2;
+        display: flex;
+        align-items: center;
+
+        &__pic {
+            flex-shrink: 0;
+            align-self: center;
+            margin-left: 1rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 6rem;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__name {
+            color: $c-1;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+
+    .ratings {
+        order: 1;
+
+        .star {
+            display: inline-block;
+            width: 1.3rem;
+            height: 1.25rem;
+
+            &:not(:last-child) {
+                margin-right: .4rem;
+            }
+        }
+    }
+
+    .description {
+        margin-bottom: 3rem;
+
+        .container {
+            padding: 0;
+
+            .content {
+                display: grid;
+                row-gap: 2rem;
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    @include breakpoint(md) {
+        header {
+            flex-direction: row;
+        }
+
+        .titles-and-tags {
+            margin-right: 1.5rem;
+
+            .subtitle {
+                font-size: 1.8rem;
+            }
+        }
+
+        .tag {
+            margin-bottom: 2.4rem;
+            padding: .3rem 4rem;
+            font-size: 1.4rem;
+        }
+
+        .ratings-container {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .owner {
+            order: 1;
+
+            &__pic {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            &__name {
+                font-size: 1.8rem;
+            }
+        }
+
+        .ratings {
+            order: 2;
+            margin-top: 1.5rem;
+            margin-bottom: auto;
+
+            .star {
+                width: 2.5rem;
+                height: 2.4rem;
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .description {
+            margin-bottom: 5rem;
+
+            .container {
+                .content {
+                    grid-template-columns: repeat(2, 1fr);
+                    row-gap: 3rem;
+                    column-gap: 6rem;
+                }
+            }
+        }
+    }
+}

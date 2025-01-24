@@ -1,19 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"; // Import React to create a component
+import { Outlet } from "react-router-dom"; // Outlet is used to render nested routes
 
-function Main(props) {
-    const children = props.children
-
-    return (
-        <main>
-            {children}
-        </main>
-    )
+// Main component is the layout for the app, which holds other pages
+function Main() {
+  return (
+    <main>
+      {/* Outlet will render the nested route components inside Main */}
+      <Outlet />
+    </main>
+  );
 }
 
-// Props validation
-Main.propTypes = {
-    children: PropTypes.node, // 'children' can be any renderable content
-}
-
-export default Main
+export default Main; // Export the Main component for use in other parts of the app
