@@ -1,4 +1,3 @@
-import React from "react"; // Import React to create a component
 import { useLocation } from "react-router-dom"; // Import useLocation hook to get the current URL
 import Navbar from "./Navbar"; // Import Navbar component to display the top navigation bar
 import Banner from "./Banner"; // Import Banner component to display a special banner on the homepage
