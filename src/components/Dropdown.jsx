@@ -1,39 +1,45 @@
-import React, { useState } from "react"; // Import React and useState to manage the dropdown's state
+import { useState } from "react";
+import PropTypes from "prop-types";
 
-// The Dropdown component takes two props: title and content
 function Dropdown({ title, content }) {
-    // Declare a state variable 'isOpen' to handle the opening and closing of the dropdown
+    // Declare a state variable 'isOpen' to manage the dropdown's open/close state
     const [isOpen, setIsOpen] = useState(false);
 
-    // The isOpen variable is used to conditionally render the dropdown content
     return (
-        <div className={`dropdown ${isOpen ? "open" : ""}`}> {/* Apply the 'open' class if the dropdown is open */}
+        <div className={`dropdown ${isOpen ? "open" : ""}`}>
             {/* Dropdown header */}
             <div
                 className="dropdown__header"
-                onClick={() => setIsOpen(!isOpen)} // Toggle the isOpen state when clicked
+                onClick={() => setIsOpen(!isOpen)} // Toggle the 'isOpen' state on click
             >
-                <h2>{title}</h2> {/* Display the title of the dropdown */}
+                <h2>{title}</h2>
             </div>
 
-            {/* Only display the content if isOpen is true */}
-            {isOpen && (
-                <div className="dropdown__content">
-                    {/* Check if content is an array to display it as a list */}
-                    {Array.isArray(content) ? (
-                        <ul>
-                            {content.map((item, index) => (
-                                <li key={index}>{item}</li> // Display each item in a <li>
-                            ))}
-                        </ul>
-                    ) : (
-                        // If content is not an array, display it as a paragraph
-                        <p>{content}</p>
-                    )}
-                </div>
-            )}
+            {/* Display the content only if isOpen is true */}
+            <div className="dropdown__content">
+                {/* Check if content is an array to display it as a list */}
+                {Array.isArray(content) ? (
+                    <ul>
+                        {content.map((item, index) => (
+                            <li key={index}>{item}</li> // Display each item in a <li>
+                        ))}
+                    </ul>
+                ) : (
+                    // If content is not an array, display it as a paragraph
+                    <p>{content}</p>
+                )}
+            </div>
         </div>
     );
 }
+
+// Define PropTypes for the Dropdown component
+Dropdown.propTypes = {
+    title: PropTypes.string.isRequired, // Title must be a string and is required
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+    ]).isRequired, // Content can be a string or an array of strings
+};
 
 export default Dropdown; // Export the Dropdown component

@@ -1,8 +1,9 @@
-import React from 'react';
 import { Link } from "react-router-dom"; // Import Link for navigation
 import logo from "../assets/img/logo-bw.svg"; // Import logo image
 
 function Footer() {
+    const currentYear = new Date().getFullYear();
+    
     return (
         <footer>
             <div className="container">
@@ -20,7 +21,7 @@ function Footer() {
 
                     {/* Copyright text */}
                     <p className="copyright">
-                        © 2025 Kasa. All rights reserved
+                        © {currentYear} Kasa. All rights reserved
                     </p>
                 </div>
             </div>

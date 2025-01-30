@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from "prop-types"; // Import PropTypes for prop validation
 
 function FlatTitle({ title, location }) {
     return (
@@ -10,5 +10,11 @@ function FlatTitle({ title, location }) {
         </>
     );
 }
+
+// Define prop types for the component
+FlatTitle.propTypes = {
+    title: PropTypes.string.isRequired,   // Validate that title is a required string
+    location: PropTypes.string.isRequired, // Validate that location is a required string
+};
 
 export default FlatTitle;

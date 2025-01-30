@@ -1,4 +1,3 @@
-import React from "react"; // Import React to create the component
 import banner from "../assets/img/banner.jpg"; // Import the banner image
 
 // Banner component displays a section with an image and a heading

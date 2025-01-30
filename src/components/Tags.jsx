@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types"; // Import PropTypes for prop validation
 
 function Tags({ tags }) {
     return (
@@ -11,5 +11,10 @@ function Tags({ tags }) {
         </div>
     );
 }
+
+// Define prop types for the component
+Tags.propTypes = {
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired, // Validate that tags is an array of strings
+};
 
 export default Tags;

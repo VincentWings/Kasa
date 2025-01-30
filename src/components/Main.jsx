@@ -1,4 +1,3 @@
-import React from "react"; // Import React to create a component
 import { Outlet } from "react-router-dom"; // Outlet is used to render nested routes
 
 // Main component is the layout for the app, which holds other pages

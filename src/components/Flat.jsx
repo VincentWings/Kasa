@@ -1,4 +1,3 @@
-import React from "react"; // Import React library
 import { Link } from "react-router-dom"; // Import Link for navigation
 import PropTypes from "prop-types"; // Import PropTypes to validate component props
 

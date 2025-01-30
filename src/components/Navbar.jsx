@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink for navigation with active state
 import logo from "../assets/img/logo.svg"; // Import logo image
 

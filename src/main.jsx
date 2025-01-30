@@ -27,10 +27,8 @@ createRoot(rootElement).render(
           <Route path="/flat/:id" element={<FlatOverview />} />
           {/* Route for the About page */}
           <Route path="/about" element={<About />} />
-          {/* Route for the custom 404 page */}
-          <Route path="/404" element={<PageNotFound />} />
-          {/* Redirects all unknown paths to the 404 page */}
-          <Route path="*" element={<Navigate to="/404" replace />} />
+          {/* Catch all routes that don't match any defined path */}
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
