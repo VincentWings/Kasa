@@ -8,7 +8,7 @@ function Grid() {
   // useEffect runs after the component is mounted
   useEffect(() => {
     // Fetch data from the logements.json file
-    fetch("/src/datas/logements.json")
+    fetch("../src/datas/logements.json")
       .then((response) => {
         // Check if the response is successful
         if (!response.ok) {
