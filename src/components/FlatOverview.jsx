@@ -18,7 +18,7 @@ function FlatOverview() {
   // Fetch flat data based on the ID
   useEffect(() => {
     // Fetch the JSON data containing flats
-    fetch("/src/datas/logements.json")
+    fetch("/datas/logements.json")
       .then((response) => response.json()) // Parse the JSON response
       .then((data) => {
         // Find the flat that matches the current ID
